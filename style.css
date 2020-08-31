@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'MaplestoryOTFBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+             
+
+body {
+  margin: 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #dfe6e9;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 26px;
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid grey;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 22px;
+  padding:0px;
+}
+
+#Visible_LB {
+  border-bottom: 2px solid grey;
+  padding: 0px;
+  margin:0px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input[id="Visible_CB"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bcbcbc;
+  cursor: pointer;
+}
+
+input[type="button"] {
+  margin: 5px;
+  color:black;
+  font-size: 14px;
+  font-weight: bolder;
+  align-self: center;
+  text-align: center;
+  padding: 0px;
+  width: 100px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+input[id="Conce_Off"] {
+  width: 100px;
+  height: 50px;
+  align-self: center;
+}
+
+#Conce_View {
+  display: none;
+  grid-template-columns: 1fr 110px;
+}
+
+#Contents {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+}
+#Select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#Title {
+  display: grid;
+  grid-template-columns: 1fr 110px 110px;
+  border-bottom: 2px solid grey;
+}
+
+#Setting {
+  border-right: 2px solid grey;
+}
+
+#key_Select {
+  height: 797px;
+
+}
+
+#music_Select {
+  border-left: 2px solid grey;
+  height: 797px;
+}
+#video {
+  display: grid;
+  grid-template-rows : 1fr 100% ;
+}
+
+iframe {
+  padding: 10px;
+  align-self: center;
+  width: 550px;
+  height: 330px;
+}
+
+#music_video {
+  width: 550px;
+  height: 330px;
+  margin : 10px;
+}
+
+#key_video {
+  width: 550px;
+  height: 330px;
+  margin : 10px;
+}
+
+/**/
+.multi-level,
+.item ul,
+.nav input[type="checkbox"] {
+  display: none;
+}
+
+.multi-level,
+.item input:checked ~ ul {
+  display: block;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  float: left;
+  z-index: 0;
+  margin: 17px 1em 0 2em;
+}
+.item input + .arrow {
+  transform: rotate(-90deg);
+  transition: 0.1s;
+}
+.item input:checked + .arrow {
+  transform: rotate(0deg);
+  transition: 0.1s;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.nav {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.nav ul,
+.nav li,
+label {
+  line-height: 50px;
+  margin: 0;
+  padding-left: 10px;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+}
+
+.item ul {
+  padding: 0px;
+}
+
+.item ul li {
+  padding-left: 50px;
+}
+
+.Title_of_Contents{
+  font-size: 28px;
+  line-height: 50px;
+  padding-left : 10px;
+}
+
+* {
+  font-family: 'MaplestoryOTFBold';
+}
+
+label, h1, h2 {
+  color: #2d3436;
+}
+
+
+@media(min-width : 1860px) {
+  #video {
+    display: grid;
+    grid-template-columns: 1fr 100%;
+  }
+}

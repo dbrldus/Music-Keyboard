@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Music</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="System.js"></script>
+    <script src="Hover.js"></script>
+    <div id="Conce_View">
+      <br>
+      <input
+        type="button"
+        id="Conce_Off"
+        value="집중 모드 끄기"
+        onclick="Conce_Off_Clicked()"
+      />
+    </div>
+    <div id="Non_Conce_View">
+      <div id="Title">
+        <h1>Keyboard & Music</h1>
+        <input
+          type="button"
+          id="NightBtn"
+          value="야간 모드 켜기"
+          onclick="NightModeOnOff(this.value)"
+        />
+        <input
+          type="button"
+          id="Conce_On"
+          value="집중 모드 켜기"
+          onclick="Conce_On_Clicked()"
+        />
+      </div>
+      <div id="Contents">
+        <div id="Setting">
+          <h2>Setting</h2>
+          <label id="Visible_LB"><input type="checkbox" id="Visible_CB" value="1" onclick="VideoVisible()" checked/>비디오 보이기</label>
+          <div id="Select">
+            <div id="key_Select">
+              <div class="nav">
+                <input type="checkbox" id="menu" checked="checked" />
+                <label for="menu" class="Title_of_Contents">Keyboard</label>
+                <label><input type="radio" name="keyboard" value="0" onclick="KeyboardChange(this.value)" checked>None</label>
+
+                <div class="multi-level">
+                  <div class="item" onmousemove="ItemMouseOver(this)" onmouseout="ItemMouseOut(this)">
+                    <input type="checkbox" id="Membrane"/>
+                    <img src="images/Arrow.png" class="arrow"/>
+                    <label for="Membrane">멤브레인 키보드</label>
+
+                    <ul>
+                      <li><label><input type="radio" name="keyboard" value="큐센 DT-35" onclick="KeyboardChange(this.value)">큐센 DT-35</label></li>
+                    </ul>  
+                  </div>
+                  <div class="item" onmousemove="ItemMouseOver(this)" onmouseout="ItemMouseOut(this)">
+                    <input type="checkbox" id="Mechanical"/>
+                    <img src="images/Arrow.png" class="arrow"/>
+                    <label for="Mechanical">기계식 키보드</label>
+                    <ul>
+                      <li><label><input type="radio" name="keyboard" value="게이트론 흑축" onclick="KeyboardChange(this.value)">게이트론 흑축</label></li>
+                      <li><label><input type="radio" name="keyboard" value="아트박스 적축" onclick="KeyboardChange(this.value)">아트박스 적축</label></li>
+                      <li><label><input type="radio" name="keyboard" value="체리 MX 적축" onclick="KeyboardChange(this.value)">체리 MX 적축</label></li>
+                    </ul>
+                  </div>
+                  <div class="item" onmousemove="ItemMouseOver(this)" onmouseout="ItemMouseOut(this)">
+                    <input type="checkbox" id="Non_Contact"/>
+                    <img src="images/Arrow.png" class="arrow"/>
+                    <label for="Non_Contact">무접점 키보드</label>
+                    <ul>
+                      <li><label><input type="radio" name="keyboard" value="앱코 K990 V3" onclick="KeyboardChange(this.value)">앱코 K990 V3</label></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="music_Select">
+              <div class="nav">
+                <input type="checkbox" id="menu" checked="checked"/>
+                <label for="menu" class="Title_of_Contents">Music</label>
+                <label><input type="radio" name="music" value="0" onclick="SongChange(this.value)" checked>None</label>
+
+                <div class="multi-level">
+                  <div class="item" onmousemove="ItemMouseOver(this)" onmouseout="ItemMouseOut(this)">
+                    <input type="checkbox" id="Maplestory"/>
+                    <img src="images/Arrow.png" class="arrow"/>
+                    <label for="Maplestory">Maplestory OST</label>
+                    <ul>
+                      <li><label><input type="radio" name="music" value="흩어진 시간" onclick="SongChange(this.value)">흩어진 시간</label></li>
+                    </ul>
+                  </div>
+                  <div class="item" onmousemove="ItemMouseOver(this)" onmouseout="ItemMouseOut(this)">
+                    <input type="checkbox" id="Kartrider"/>
+                    <img src="images/Arrow.png" class="arrow"/>
+                    <label for="Kartrider">Kartrider OST</label>
+                    <ul>
+                      <li>
+                        <div class="item" onmousemove="ItemMouseOver(this)" onmouseout="ItemMouseOut(this)">
+                          <input type="checkbox" id="Abyss"/>
+                          <img src="images/Arrow.png" class="arrow"/>
+                          <label for="Abyss">어비스 테마</label>
+                          <ul>
+                            <li><label><input type="radio" name="music" value="어비스 웨이브" onclick="SongChange(this.value)">어비스 웨이브</label></li>
+                            <li><label><input type="radio" name="music" value="심해의 지배자" onclick="SongChange(this.value)">심해의 지배자</label></li>
+                            <li><label><input type="radio" name="music" value="꿈꾸는 소녀" onclick="SongChange(this.value)">꿈꾸는 소녀</label></li>
+                            <li><label><input type="radio" name="music" value="너울대는 파도처럼" onclick="SongChange(this.value)">너울대는 파도처럼</label></li>
+                            <li><label><input type="radio" name="music" value="바다 사나이 머맨" onclick="SongChange(this.value)">바다 사나이 머맨</label></li>
+                          </ul>
+                        </div>
+                      </li><li>
+                        <div class="item" onmousemove="ItemMouseOver(this)" onmouseout="ItemMouseOut(this)">
+                          <input type="checkbox" id="Good" />
+                          <img src="images/Arrow.png" class="arrow" />
+                          <label for="Good">듣기 좋은 곡</label>
+                          <ul>
+                            <li><label><input type="radio" name="music" value="대륙의 붉은 비트" onclick="SongChange(this.value)">대륙의 붉은 비트</label></li>
+                            <li><label><input type="radio" name="music" value="대저택 댄스 배틀" onclick="SongChange(this.value)">대저택 댄스 배틀</label></li>
+                            <li><label><input type="radio" name="music" value="겨울에는 캐롤" onclick="SongChange(this.value)">겨울에는 캐롤</label></li>
+                            <li><label><input type="radio" name="music" value="배찌 뒹굴뒹굴" onclick="SongChange(this.value)">배찌 뒹굴뒹굴</label></li>
+                            <li><label><input type="radio" name="music" value="다이아몬드 러쉬" onclick="SongChange(this.value)">다이아몬드 러쉬</label></li>
+                            <li><label><input type="radio" name="music" value="기사왕에게 영광 있으라" onclick="SongChange(this.value)">기사왕에게 영광 있으라</label></li>
+                            <li><label><input type="radio" name="music" value="바람보다 자유롭게" onclick="SongChange(this.value)">바람보다 자유롭게</label></li>
+                            <li><label><input type="radio" name="music" value="카르노와 한판 승부" onclick="SongChange(this.value)">카르노와 한판 승부</label></li>
+                            <li><label><input type="radio" name="music" value="타키의 무대" onclick="SongChange(this.value)">타키의 무대</label></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="video">
+          <div id="music_video"></div>
+          <div id="key_video"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
